@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+    height: 100vh;
+    padding: 1em 2em;
+}
+
+.home-section{
+    background-color: rgb(41, 144, 240);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-section{
+    background-color: #eee;
+}
+
+.emb-section{
+    background-color: burlywood;
+}
+h1{
+    margin: 0;
+    color: #fff;
+    font-size: 3rem;
+}
+
+figure{
+    width: 900px;
+}
