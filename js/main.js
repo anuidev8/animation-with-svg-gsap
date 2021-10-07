@@ -6,18 +6,39 @@ const animationProperties = {
   duration: 1.8,
 };
 
-/* tl.from(".computer", {
-  y: 300,
-  opacity: 0,
-  ease: "expo.out",
-  duration: 1,
-}).to(".computer", {
-  y: 0,
-  opacity: 1,
-  ease: "expo.out",
-  duration: 1,
-}); */
 gsap
+  .timeline()
+  .from(".computer", {
+    y: 300,
+    opacity: 0,
+    ease: "expo.out",
+    duration: 1,
+  })
+  .to(".computer", {
+    y: 0,
+    opacity: 1,
+    ease: "expo.out",
+    duration: 1,
+  })
+  .from(
+    ".mdi-women",
+    {
+      x: -200,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1,
+    },
+    "-=1.8"
+  )
+
+  .to(".mdi-women", {
+    y: 0,
+    opacity: 1,
+    ease: "expo.out",
+    duration: 1,
+  });
+
+/*gsap
   .timeline({
     scrollTrigger: {
       trigger: ".home-section",
@@ -78,7 +99,7 @@ gsap
       ...animationProperties,
     },
     "-=6.5"
-  );
+  );*/
 
 const tl = gsap.timeline();
 const tl2 = gsap.timeline();
@@ -86,7 +107,7 @@ const tl3 = gsap.timeline();
 const tl4 = gsap.timeline();
 const tl5 = gsap.timeline();
 const tl6 = gsap.timeline();
-//const tl = gsap.timeline({yoyo: true, repeat: -1 });
+
 tl.from(".mdi-women-arm", {
   y: -4,
   rotation: 10,
@@ -113,7 +134,6 @@ tl.from(".search-item", {
   .repeat(-1)
   .timeScale(1.3)
   .play(0.3);
-
 tl2
   .from(".mdi-women-arm-left", {
     y: 0,
@@ -152,27 +172,29 @@ tl3
 
 tl4
   .from(".mdi-women-head", {
-    rotation: 5,
+    rotation: 7,
     ease: "none",
     duration: 1.5,
+    transformOrigin: "bottom",
   })
   .to(".mdi-women-head", {
-    rotation: -5,
+    rotation: -7,
     ease: "none",
     duration: 1.5,
+    transformOrigin: "bottom",
   })
 
   .from(".mdi-women-message", {
     scale: 0,
     ease: "elastic.out(1, 0.3)",
     duration: 1.5,
-    transformOrigin: "bottom right",
+    transformOrigin: "bottom ",
   })
   .to(".mdi-women-message", {
     scale: 1,
     ease: "elastic.out(1, 0.3)",
     duration: 1.5,
-    transformOrigin: "bottom right",
+    transformOrigin: "bottom ",
   })
   .yoyo(true)
   .repeat(-1)
@@ -199,6 +221,139 @@ tl6
   .yoyo(true)
   .repeat(-1);
 
+//MEN ANIMATION
+const menAnimation = gsap.timeline();
+const menAnimationIcon = gsap.timeline();
+const menAnimationSearch = gsap.timeline();
+const menAnimationSearchIcon = gsap.timeline();
+const circleIteration = gsap.timeline();
+const uiElements = gsap.timeline();
+menAnimation
+  .from(".mdi-men-arms", {
+    rotation: 5,
+    ease: "elastic",
+    duration: 1.5,
+    transformOrigin: "right",
+  })
+  .to(".mdi-men-arms", {
+    rotation: -5,
+    ease: "ease",
+    duration: 1.5,
+    transformOrigin: "right",
+  })
+  .yoyo(true)
+  .repeat(-1)
+  .timeScale(1.5)
+  .play(0.3);
+
+menAnimationIcon
+
+  .from(".mdi-men-search-icon", {
+    rotation: 7,
+    ease: "elastic",
+    duration: 1.5,
+    transformOrigin: "bottom",
+  })
+  .to(".mdi-men-search-icon", {
+    rotation: -7,
+    ease: "ease",
+    duration: 1.5,
+    transformOrigin: "bottom",
+    stagger: 1,
+  })
+
+  .yoyo(true)
+  .repeat(-1)
+  .timeScale(1.5)
+  .play(0.3);
+
+menAnimationSearch
+  .from(".mdi-search-box", {
+    scaleX: 1,
+    ease: "expo.in",
+    duration: 1.2,
+  })
+  .to(".mdi-search-box", {
+    scaleX: 0.5,
+    ease: "expo.in",
+    duration: 1.2,
+  })
+
+  .yoyo(true)
+  .repeat(-1);
+menAnimationSearchIcon
+  .from(".mdi-search-box-loop", {
+    x: 0,
+    opacity: 1,
+    ease: "expo.in",
+    duration: 1.2,
+  })
+  .to(".mdi-search-box-loop", {
+    x: -210,
+    opacity: 0,
+    ease: "expo.in",
+    duration: 1.2,
+  })
+  .yoyo(true)
+  .repeat(-1);
+
+circleIteration
+  .from(".circle-iteration", {
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    ease: "ease.in",
+    duration: 2,
+    stagger: 2,
+  })
+  .to(".circle-iteration", {
+    y: 30,
+    opacity: 0,
+    ease: "ease",
+    duration: 2,
+    stagger: 2,
+  })
+  .yoyo(true)
+  .repeat(-1)
+  .timeScale(3.5)
+  .play(0.3);
+uiElements
+  .from(".mdi-ui-elements", {
+    y: 0,
+    scale: 1,
+    opacity: 1,
+    ease: "expo.out",
+    duration: 1.5,
+    stagger: 1,
+  })
+  .to(".mdi-ui-elements", {
+    x: 10,
+    scale: 0.8,
+    opacity: 0.5,
+    ease: "expo.out",
+    duration: 1.5,
+    stagger: 1,
+  })
+  .yoyo(true)
+  .repeat(-1)
+  .timeScale(1.5)
+  .play(0.3);
+
+/* 
+    .from(".mdi-men-search-reflector", {
+    x: -5,
+    y: -5,
+    ease: "ease",
+    duration: 0.5,
+  })
+  .to(".mdi-men-search-reflector", {
+    x: 12,
+    y: 6,
+    ease: "ease",
+    duration: 0.5,
+  })
+  
+  */
 /* tl.from(".mdi-ui-elements-info", {
   stagger: { amount: 0.5 },
   scale: 0,
