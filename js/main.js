@@ -339,6 +339,30 @@ uiElements
   .timeScale(1.5)
   .play(0.3);
 
+//PARTUCULES ANIMATION
+
+gsap
+  .timeline()
+  .to(".particles", {
+    x: 150,
+    y: 150,
+    opacity: 0,
+    duration: 1.8,
+    ease: "ease",
+    yoyo: true,
+    repeat: -1,
+    stagger: 1,
+  })
+  .to(".particles-circles", {
+    y: 150,
+    opacity: 0,
+    duration: 1.8,
+    ease: "ease",
+    yoyo: true,
+    repeat: -1,
+    stagger: 1,
+  });
+
 /* 
     .from(".mdi-men-search-reflector", {
     x: -5,
