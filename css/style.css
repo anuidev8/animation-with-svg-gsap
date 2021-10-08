@@ -30,3 +30,7 @@ h1{
 figure{
     width: 900px;
 }
+
+.svg-box{
+    position: fixed;
+}

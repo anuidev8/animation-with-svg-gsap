@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(41, 144, 240) ;
+}
+
+section{
+    position: relative;
+    height: 100vh;
+    padding: 1em 4em;
+}
+
+.home-section{
+    background-color: rgb(41, 144, 240);
+    display: flex;
+    align-items: center;
+    height: 130vh;
+}
+.about-section{
+    background-color: rgb(198, 238, 248);
+    height: 120vh;
+}
+
+.emb-section{
+    background-color: rgb(250, 180, 100);
+}
+.company-section{
+    background-color: rgb(44, 44, 82);
+}
+.end-section{
+    background-color: rgb(81, 127, 252);
+}
+h1{
+    width: 420px;
+    margin: 0;
+    color: #fff;
+    font-size: 4rem;
+    margin-top: 100px;
+}
+.subtitle{
+    color: rgb(21, 52, 73);
+}
+
+.main-title{
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 50%;
+    font-size: 7rem;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+figure{
+    width: 900px;
+}
+
+.svg-box{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 680px;
+    z-index: 100;
+}
