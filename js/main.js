@@ -10,16 +10,61 @@ gsap
   .timeline()
   .from(".computer", {
     y: 300,
+    rotation: 100,
     opacity: 0,
-    ease: "expo.out",
-    duration: 1,
+    ease: "elastic.out(1, 0.3)",
+    duration: 1.5,
+    transformOrigin: "bottom",
   })
   .to(".computer", {
     y: 0,
+    rotation: 0,
     opacity: 1,
-    ease: "expo.out",
-    duration: 1,
+    ease: "elastic.out(1, 0.3)",
+    duration: 1.5,
+    transformOrigin: "bottom",
   })
+  .from(
+    ".particles-circles-box",
+    {
+      y: 80,
+      ease: "elastic.out(1, 0.3)",
+      duration: 1,
+    },
+    "-=2.6"
+  )
+  .from(
+    ".mdi-search-container",
+    {
+      y: 100,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1.4,
+    },
+    "-=2.6"
+  )
+  .from(
+    ".search-item-box",
+    {
+      scaleX: 0,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1.2,
+    },
+    "-=2"
+  )
+  .from(
+    ".mdi-ui-elements-box",
+    {
+      y: 100,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1.2,
+      stagger: 0.2,
+    },
+    "-=2"
+  )
+
   .from(
     ".mdi-women",
     {
@@ -28,15 +73,39 @@ gsap
       ease: "expo.out",
       duration: 1,
     },
-    "-=1.8"
+    "-=.7"
   )
-
-  .to(".mdi-women", {
-    y: 0,
-    opacity: 1,
-    ease: "expo.out",
-    duration: 1,
-  });
+  .from(
+    ".mdi-men",
+    {
+      x: 200,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1,
+    },
+    "-=.7"
+  )
+  .from(
+    ".circle-iteration-box",
+    {
+      y: 100,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1.2,
+      stagger: 0.5,
+    },
+    "-=2.3"
+  )
+  .from(
+    ".mdi-tree",
+    {
+      x: 80,
+      opacity: 0,
+      ease: "expo.out",
+      duration: 1.2,
+    },
+    "-=.8"
+  );
 
 /*gsap
   .timeline({
@@ -133,7 +202,8 @@ tl.from(".search-item", {
   .yoyo(true)
   .repeat(-1)
   .timeScale(1.3)
-  .play(0.3);
+  .play(0.3)
+  .delay(3);
 tl2
   .from(".mdi-women-arm-left", {
     y: 0,
@@ -267,6 +337,7 @@ menAnimationIcon
   .timeScale(1.5)
   .play(0.3);
 
+//sSEARCH BOX
 menAnimationSearch
   .from(".mdi-search-box", {
     scaleX: 1,
@@ -280,7 +351,8 @@ menAnimationSearch
   })
 
   .yoyo(true)
-  .repeat(-1);
+  .repeat(-1)
+  .delay(3);
 menAnimationSearchIcon
   .from(".mdi-search-box-loop", {
     x: 0,
@@ -295,7 +367,8 @@ menAnimationSearchIcon
     duration: 1.2,
   })
   .yoyo(true)
-  .repeat(-1);
+  .repeat(-1)
+  .delay(3);
 
 circleIteration
   .from(".circle-iteration", {
@@ -319,25 +392,26 @@ circleIteration
   .play(0.3);
 uiElements
   .from(".mdi-ui-elements", {
-    y: 0,
     scale: 1,
     opacity: 1,
     ease: "expo.out",
     duration: 1.5,
     stagger: 1,
+    transformOrigin: "bottom",
   })
   .to(".mdi-ui-elements", {
-    x: 10,
     scale: 0.8,
     opacity: 0.5,
     ease: "expo.out",
     duration: 1.5,
     stagger: 1,
+    transformOrigin: "bottom",
   })
   .yoyo(true)
   .repeat(-1)
   .timeScale(1.5)
-  .play(0.3);
+  .play(0.3)
+  .delay(2);
 
 //PARTUCULES ANIMATION
 
