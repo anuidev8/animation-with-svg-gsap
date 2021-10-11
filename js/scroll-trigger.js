@@ -65,6 +65,13 @@ gsap
     },
   })
 
+  .to("body", {
+    backgroundColor: "rgb(198, 238, 248)",
+    ease: "none",
+    opacity: 1,
+    duration: 3,
+    delay: 4,
+  })
   .from(secondSectionTitle, {
     y: 300,
     opacity: 0,
