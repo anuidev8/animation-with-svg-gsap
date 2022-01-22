@@ -2,7 +2,9 @@
 
 Animation svg elements with Scroll trigger animation using gsap . the animation start when the scroll out off each secion ...
 
-[![Demo](https://res.cloudinary.com/dqhme1rod/image/upload/v1633977513/md/ilfkwcvphif1przlgqil.png)](https://res.cloudinary.com/dqhme1rod/video/upload/v1628282582/md/vxjqju0ap3jeguvekjtp.mp4)
+[![Demo](https://res.cloudinary.com/dqhme1rod/image/upload/v1633977513/md/ilfkwcvphif1przlgqil.png)](https://res.cloudinary.com/dqhme1rod/video/upload/v1633977398/md/sgmcxfauav1469o4ohwb.mp4)
+
+[video example here](https://res.cloudinary.com/dqhme1rod/video/upload/v1633977398/md/sgmcxfauav1469o4ohwb.mp4)
 
 ## Motivation
 
